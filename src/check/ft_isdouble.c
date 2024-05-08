@@ -6,11 +6,25 @@
 /*   By: oprosvir <oprosvir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 21:27:30 by oprosvir          #+#    #+#             */
-/*   Updated: 2024/05/08 21:51:09 by oprosvir         ###   ########.fr       */
+/*   Updated: 2024/05/08 22:02:33 by oprosvir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static bool	is_valid_double_char(char c, bool *has_decimal)
+{
+	if (ft_isdigit((int)c))
+		return (true);
+	if (c == '.')
+	{
+		if (*has_decimal)
+			return (false);
+		*has_decimal = true;
+		return (true);
+	}
+	return (false);
+}
 
 bool	is_double(const char *str)
 {
@@ -19,22 +33,16 @@ bool	is_double(const char *str)
 
 	has_decimal = false;
 	has_digits = false;
-    while (ft_isspace((int)*str))
+	while (ft_isspace((int)*str))
     {
-        str++;
-    }    
+		str++;
+    }
 	if (*str == '-' || *str == '+')
 		str++;
 	while (*str != '\0')
 	{
-		if (ft_isdigit((unsigned char)*str))
+		if (is_valid_double_char(*str, &has_decimal))
 			has_digits = true;
-		else if (*str == '.')
-		{
-			if (has_decimal)
-				return (false);
-			has_decimal = true;
-		}
 		else
 			return (false);
 		str++;
