@@ -6,7 +6,7 @@
 /*   By: oprosvir <oprosvir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 16:42:36 by oprosvir          #+#    #+#             */
-/*   Updated: 2024/03/26 13:02:44 by oprosvir         ###   ########.fr       */
+/*   Updated: 2024/05/08 18:15:41 by oprosvir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int					ft_printnum(int n);
 int					ft_print_unsigned(unsigned int n);
 int					ft_printhex(unsigned int num, bool is_capital);
 int					ft_printptr(unsigned long long num);
+int					ft_strcmp(const char *s1, const char *s2);
 size_t				ft_strlen(const char *s);
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
