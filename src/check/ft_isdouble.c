@@ -6,7 +6,7 @@
 /*   By: oprosvir <oprosvir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 21:27:30 by oprosvir          #+#    #+#             */
-/*   Updated: 2024/05/08 21:46:09 by oprosvir         ###   ########.fr       */
+/*   Updated: 2024/05/08 21:51:09 by oprosvir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@ bool	is_double(const char *str)
 	has_decimal = false;
 	has_digits = false;
     while (ft_isspace((int)*str))
+    {
         str++;
+    }    
 	if (*str == '-' || *str == '+')
 		str++;
 	while (*str != '\0')
