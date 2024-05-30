@@ -6,7 +6,7 @@
 /*   By: oprosvir <oprosvir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 16:42:36 by oprosvir          #+#    #+#             */
-/*   Updated: 2024/05/08 22:25:05 by oprosvir         ###   ########.fr       */
+/*   Updated: 2024/05/30 14:04:47 by oprosvir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,6 @@ void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 bool				ft_isspace(int c);
-bool				ft_isdouble(const char *str);
 
 typedef struct s_list
 {
