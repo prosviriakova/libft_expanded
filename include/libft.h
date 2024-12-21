@@ -6,7 +6,7 @@
 /*   By: oprosvir <oprosvir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 16:42:36 by oprosvir          #+#    #+#             */
-/*   Updated: 2024/05/30 14:04:47 by oprosvir         ###   ########.fr       */
+/*   Updated: 2024/12/21 15:10:02 by oprosvir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,10 +66,11 @@ char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*get_next_line(int fd);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 void				ft_putchar_fd(char c, int fd);
-void				ft_putstr_fd(char *s, int fd);
-void				ft_putendl_fd(char *s, int fd);
+void				ft_putstr_fd(const char *s, int fd);
+void				ft_putendl_fd(const char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 bool				ft_isspace(int c);
+char				**ft_strtok(char *str, char *charset);
 
 typedef struct s_list
 {
